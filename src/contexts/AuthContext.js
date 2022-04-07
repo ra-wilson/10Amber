@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../firebase";
 import { 
   createUserWithEmailAndPassword,
-
+  signInWithEmailAndPassword
 } from "firebase/auth";
 
 const AuthContext = React.createContext();
@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
   }
 
   function login(email, password) {
-    return auth.signInWithEmailAndPassword(email, password)
+    return signInWithEmailAndPassword(auth, email, password)
   }
 
 
