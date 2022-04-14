@@ -3,6 +3,8 @@ import { getAuth } from 'firebase/auth';
 
 console.log(process.env.REACT_APP_FIREBASE_API_KEY)
 
+// firebase keys
+
 const app = initializeApp({
   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
