@@ -4,8 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext.js";
 export default function Dashboard() {
   const [error, setError] = useState("");
-  const {logout} = useAuth()
-  const {navigate} = useNavigate()
+  const navigate = useNavigate()
+  const { logout } = useAuth()
 
   async function handleLogout() {
       setError('')
