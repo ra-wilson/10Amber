@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getAuth } from 'firebase/auth';
+import { getFirestore, collection, getDocs } from 'firebase/firestore'
 
 console.log(process.env.REACT_APP_FIREBASE_API_KEY)
 
@@ -18,3 +19,29 @@ const app = initializeApp({
 // export const auth = app.auth()
 export const auth = getAuth();
 export default app
+
+
+// init database
+const db = getFirestore()
+
+
+
+export async function getDrinksData(done) {
+// collection ref
+const colRef = collection(db, 'drinks')
+
+// get collection data
+getDocs(colRef)
+  .then((snapshot) => {
+    let drinks = []
+    snapshot.docs.forEach((doc) => {
+      drinks.push({...doc.data(), id: doc.id})
+    })
+    console.log("HERE", drinks)
+    done(drinks);
+  })
+  .catch (err =>{
+    console.log("ERR", err.message)
+    done([]);
+  })
+}

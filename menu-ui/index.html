@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>MMU coffee shop</title>
+        <link href="index.style.css" rel="stylesheet">
+        <link href="form.style.css" rel="stylesheet">
+        <script src="form.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+
+        <header>
+            <div class="container">
+
+                <img src="MMUlogo.jpg" alt="logo" class="logo">
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="how-to-order.html">How to order</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </header>
+
+        <div class="form-popup" id="myForm">
+            <form action="/action_page.php" class="form-container">
+              <h1>Login</h1>
+          
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button type="submit" class="btn">Login</button>
+              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+          </div>
+
+        <h1>welcome to the online coffee shop</h1>
+        <p>You can place your orders here and be notified when to pick it up when its ready!</p>
+
+
+
+
+    </body>
+</html>
